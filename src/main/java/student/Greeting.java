@@ -23,12 +23,13 @@ public class Greeting {
     }
 
     /**
+     * Constructs a new Greeting object with the specified properties.
      *
-     * @param localityID
-     * @param localityName
-     * @param asciiGreeting
-     * @param unicodeGreeting
-     * @param formatStr
+     * @param localityID       the unique identifier for the locality
+     * @param localityName     the name of the locality
+     * @param asciiGreeting    the greeting message in plain ASCII format
+     * @param unicodeGreeting  the greeting message in Unicode format, allowing special characters
+     * @param formatStr        the format string used to structure or display the greeting
      */
 
     public Greeting(int localityID, String localityName, String asciiGreeting,
