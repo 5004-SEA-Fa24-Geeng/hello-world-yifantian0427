@@ -64,10 +64,10 @@ public class Greeting {
 
     public String getFormatStr(Boolean asciiOnly) {
         if (this.localityName.equals("China")){
-            String greeting = asciiOnly ? this.unicodeGreeting : this.localityName;
+            String greeting = asciiOnly ? this.asciiGreeting : this.unicodeGreeting;
             return String.format("%%s, %s!", greeting);
         } else {
-            return String.format(this.formatStr, asciiOnly ? this.unicodeGreeting : this.localityName, "%s");
+            return String.format(this.formatStr, asciiOnly ? this.asciiGreeting : this.unicodeGreeting, "%s");
         }
     }
 
