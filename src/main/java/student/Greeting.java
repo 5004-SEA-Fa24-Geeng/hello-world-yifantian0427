@@ -58,7 +58,8 @@ public class Greeting {
     }
 
     public String getFormatStr() {
-        return this.formatStr;
+        return this.localityName.equals("China") ?
+                String.format("%%s, %s!", this.unicodeGreeting) : String.format(this.formatStr, this.unicodeGreeting, "%s");
     }
 
     public String getFormatStr(Boolean asciiOnly) {
