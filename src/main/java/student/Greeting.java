@@ -45,6 +45,31 @@ public class Greeting {
         return this.localityID;
     }
 
+    public String getLocalityName() {
+        return this.localityName;
+    }
+
+    public String getAsciiGreeting() {
+        return this.asciiGreeting;
+    }
+
+    public String getUnicodeGreeting() {
+        return this.unicodeGreeting;
+    }
+
+    public String getFormatStr() {
+        return this.formatStr;
+    }
+
+    public String getFormatStr(Boolean asciiOnly) {
+        if (this.localityName.equals("China")){
+            String greeting = asciiOnly ? this.unicodeGreeting : this.localityName;
+            return String.format("%%s, %s!", greeting);
+        } else {
+            return String.format(this.formatStr, asciiOnly ? this.unicodeGreeting : this.localityName, "%s");
+        }
+    }
+
     public static void main(String[] args) {
 
     }
