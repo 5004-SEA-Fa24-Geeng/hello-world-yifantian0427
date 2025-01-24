@@ -203,7 +203,7 @@ public class Greeter {
      * hashcode will be the same.
      *
      * Java assumes that if .equals is true, the hashcodes should also be the same.
-     * 
+     *
      * @return the hashcode
      */
     @Override

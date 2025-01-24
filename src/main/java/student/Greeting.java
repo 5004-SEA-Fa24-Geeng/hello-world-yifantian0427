@@ -117,8 +117,9 @@ public class Greeting {
      * @return the formatted greeting string
      */
     public String getFormatStr() {
-        return this.localityName.equals("China") ?
-                String.format("%%s, %s!", this.unicodeGreeting) : String.format(this.formatStr, this.unicodeGreeting, "%s");
+        return this.localityName.equals("China")
+                ? String.format("%%s, %s!", this.unicodeGreeting)
+                : String.format(this.formatStr, this.unicodeGreeting, "%s");
     }
 
     /**
@@ -129,7 +130,7 @@ public class Greeting {
      * @return the formatted greeting string
      */
     public String getFormatStr(Boolean asciiOnly) {
-        if (this.localityName.equals("China")){
+        if (this.localityName.equals("China")) {
             String greeting = asciiOnly ? this.asciiGreeting : this.unicodeGreeting;
             return String.format("%%s, %s!", greeting);
         } else {
@@ -145,7 +146,8 @@ public class Greeting {
      */
     @Override
     public String toString() {
-        return String.format("{localityID:%d, localityName:\"%s\", asciiGreeting:\"%s\", unicodeGreeting:\"%s\"}", this.localityID, this.localityName, this.asciiGreeting, this.unicodeGreeting);
+        return String.format("{localityID:%d, localityName:\"%s\", asciiGreeting:\"%s\", unicodeGreeting:\"%s\"}",
+                this.localityID, this.localityName, this.asciiGreeting, this.unicodeGreeting);
     }
 
 /**
